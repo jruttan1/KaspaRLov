@@ -50,3 +50,5 @@ if __name__ == "__main__":
 
     for uci, idx in list(tokenizer.uci_to_idx.items())[:15]:
         print(uci, idx)
+
+        
