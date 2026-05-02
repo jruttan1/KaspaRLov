@@ -5,6 +5,8 @@ class Tokenizer:
     def __init__(self):
         self.uci_to_idx = {}
         self.idx_to_uci = {}
+        self.start_token = "<START>"
+
 
         def build():
             squares = []
@@ -21,7 +23,7 @@ class Tokenizer:
                     if from_square != to_square:
                         moves.append(from_square+to_square)
 
-            return moves
+            return [self.start_token] + moves
 
         moves = build()
 
